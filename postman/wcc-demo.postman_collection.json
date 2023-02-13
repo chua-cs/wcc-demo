@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "a7935a40-3fcd-4eac-a17e-32d76b2020a4",
+		"name": "wcc-demo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Distance between two postcodes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/demo/api/v1/public/distance?postcode_1=AL5 3NG&postcode_2=CF14 0LB",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"demo",
+						"api",
+						"v1",
+						"public",
+						"distance"
+					],
+					"query": [
+						{
+							"key": "postcode_1",
+							"value": "AL5 3NG"
+						},
+						{
+							"key": "postcode_2",
+							"value": "CF14 0LB"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch a location info via postcode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/demo/api/v1/public/location/AL5 3NG",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"demo",
+						"api",
+						"v1",
+						"public",
+						"location",
+						"AL5 3NG"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit a location info via postcode",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"latitude\": 51.832128,\n    \"longitude\": -0.383008\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/demo/api/v1/public/location/AL5 3NG",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"demo",
+						"api",
+						"v1",
+						"public",
+						"location",
+						"AL5 3NG"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
